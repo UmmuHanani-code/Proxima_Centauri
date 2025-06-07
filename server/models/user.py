@@ -18,6 +18,7 @@ class User(db.Model, SerializerMixin):
 
     group_memberships = db.relationship('GroupMember', back_populates='user', cascade='all, delete-orphan')
     qards = db.relationship('Qard', back_populates='borrower', cascade='all, delete-orphan')
+    profit_shares = db.relationship('ProfitShare', back_populates='user')
 
     serialize_rules = ('-group_memberships.user', '-qards.borrower',)
 

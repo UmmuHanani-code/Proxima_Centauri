@@ -36,4 +36,4 @@ api.add_resource(VoteResourceView, '/api/votes', '/api/votes/<int:vote_id>')
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=5555, debug=True)
