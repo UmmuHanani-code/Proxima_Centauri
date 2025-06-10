@@ -1,5 +1,5 @@
 from flask_restful import Resource, reqparse
-from controllers.profit_share_controller import ProfitShareController
+from controllers.profit_controller import ProfitShareController
 
 class ProfitShareResourceView(Resource):
     parser = reqparse.RequestParser()

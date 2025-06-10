@@ -1,0 +1,24 @@
+User
+├── has many → GroupMember (as memberships)
+│         └── belongs to → Group
+├── has many → Qard (as borrower)
+│         └── belongs to → Group
+├── has many → ProfitShare
+│         └── belongs to → Project
+├── has many → Transaction
+├── has many → Vote (as created_votes)
+Group
+├── has many → GroupMember
+├── has many → Qard
+├── has many → Project
+├── has many → Vote
+Project
+├── has many → ProfitShare
+Qard
+├── belongs to → Group
+├── belongs to → User (as borrower)
+Vote
+├── belongs to → Group
+├── belongs to → User (as creator)
+Transaction
+├── belongs to → User

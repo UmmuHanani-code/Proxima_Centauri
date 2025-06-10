@@ -18,7 +18,7 @@ class UserResourceView(Resource):
     def delete(self, user_id):
         return UserController.delete_user(user_id), 200
 
-    def get(self):
+    def get_all(self):
         return UserController.get_all_users(), 200
 
     def post(self):
